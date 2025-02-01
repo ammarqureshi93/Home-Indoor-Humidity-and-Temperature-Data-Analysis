@@ -1,0 +1,42 @@
+/*Lowest humidity percentage*/
+SELECT MIN(Relative_Humidity) FROM "January 2025";
+
+SELECT "Timestamp for sample frequency every 12 Hrs min" FROM "January 2025"
+WHERE Relative_Humidity = '16.7';
+
+/*Highest humidity percentage*/
+SELECT MAX(Relative_Humidity) FROM "January 2025";
+
+SELECT "Timestamp for sample frequency every 12 Hrs min" FROM "January 2025"
+WHERE Relative_Humidity = '36.8';
+
+/*Lowest temperature*/
+SELECT MIN(Temperature_Fahrenheit) FROM "January 2025";
+
+SELECT "Timestamp for sample frequency every 12 Hrs min" FROM "January 2025"
+WHERE Temperature_Fahrenheit = '67.82';
+
+/*Highest temperature*/
+SELECT MAX(Temperature_Fahrenheit) FROM "January 2025";
+
+/*Highest Temperature*/
+SELECT "Timestamp for sample frequency every 12 Hrs min" FROM "January 2025"
+WHERE Temperature_Fahrenheit = '77.36';
+
+/*Humidity less than 30%*/
+SELECT "Timestamp for sample frequency every 12 Hrs min", Relative_Humidity FROM "January 2025"
+WHERE Relative_Humidity < '30' ORDER BY "Timestamp for sample frequency every 12 Hrs min";
+
+/*Ordering relative humidity lowest to highest*/
+SELECT Relative_Humidity, "Timestamp for sample frequency every 12 Hrs min", Temperature_Fahrenheit FROM "January 2025"
+ORDER BY Relative_Humidity ASC; 
+
+/*Ordering temperature lowest to highest*/
+SELECT Relative_Humidity, "Timestamp for sample frequency every 12 Hrs min", Temperature_Fahrenheit FROM "January 2025"
+ORDER BY Temperature_Fahrenheit ASC;
+
+/*Average humidity*/
+SELECT AVG(Relative_Humidity) FROM "January 2025";
+
+/*Average temperature*/
+SELECT AVG(Temperature_Fahrenheit) FROM "January 2025";
